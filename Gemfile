@@ -5,6 +5,10 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "haml"
 gem "slim"
 gem "heroku"
+gem "clearance","0.9.0.rc9"
+gem "formtastic"
+gem "jammit"
+gem "yui-compressor"
 
 gem 'pg',:group=>:production
 
