@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Fire Warehouse
+    = include_stylesheets :common 
+    = include_javascripts :workspace 
+    = csrf_meta_tag 
+  %body
+    %ul
+      -if signed_in?
+        %li=link_to "Home","/"
+        %li=link_to "Sign out",sign_out_path,:method=>:delete
+      -else
+        %li=link_to "Sign in",sign_in_path
+        %li=link_to "Sign up", sign_up_path
+    -if flash[:notice]
+      =flash[:notice]
+    -if flash[:failure]
+      =flash[:failure]
+    -if flash[:success]
+      =flash[:success]
+    = yield

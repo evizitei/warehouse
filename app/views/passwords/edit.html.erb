@@ -7,7 +7,7 @@
 <%= semantic_form_for(:user,
             :url  => user_password_path(@user, :token => @user.confirmation_token),
             :html => { :method => :put }) do |form| %>
-  <%= errors_for(@user, "Opps, unable to add new user").html_safe %>
+  <%= form.error_messages %>
   <%= form.inputs do -%>
     <%= form.input :password, :as => :password,
                    :label => "Choose password" %>

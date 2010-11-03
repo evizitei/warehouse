@@ -1,7 +1,7 @@
 <h2>Sign up</h2>
 
 <%= semantic_form_for @user do |form| %>
-  <%= errors_for(@user, "Opps, unable to add new user").html_safe  %>
+  <%= form.error_messages%>
   <%= render :partial => "/users/inputs", :locals => { :form => form } %>
   <%= form.buttons do %>
     <%= form.commit_button "Sign up" %>
